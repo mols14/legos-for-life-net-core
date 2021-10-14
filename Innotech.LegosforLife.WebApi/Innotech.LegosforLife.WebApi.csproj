@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Innotech.LegosForLife.Core\Innotech.LegosForLife.Core.csproj" />
+      <ProjectReference Include="..\Innotech.LegosForLife.DataAccess\Innotech.LegosForLife.DataAccess.csproj" />
+      <ProjectReference Include="..\Innotech.LegosForLife.Domain\Innotech.LegosForLife.Domain.csproj" />
+      <ProjectReference Include="..\Innotech.LegosForLife.Security\Innotech.LegosForLife.Security.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "yv/Nk79HXaMM5vfUO+Ua7fiEfybzlnQoccw3nT02vDUvYLKiLVNDK3F5vy3RAeHiEmjfp/JBUD7eOQP+ntoTpA==",
+  "success": true,
+  "projectFilePath": "/Users/lbilde/Documents/work/net-core/legos-for-life/Innotech.LegosforLife.WebApi/Innotech.LegosforLife.WebApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/lbilde/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/lbilde/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/lbilde/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/lbilde/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/lbilde/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/lbilde/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
