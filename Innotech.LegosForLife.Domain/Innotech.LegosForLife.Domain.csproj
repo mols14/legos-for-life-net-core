@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Innotech.LegosForLife.Core\Innotech.LegosForLife.Core.csproj" />
+      <ProjectReference Include="..\InnoTech.LegosForLife.Core\InnoTech.LegosForLife.Core.csproj" />
     </ItemGroup>
 
 </Project>

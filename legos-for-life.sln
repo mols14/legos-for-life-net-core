@@ -6,15 +6,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Onion-Infrastructure", "Oni
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Onion-Presentaion", "Onion-Presentaion", "{546B2B82-265A-45EE-A740-60AD92A58A06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innotech.LegosForLife.Core", "Innotech.LegosForLife.Core\Innotech.LegosForLife.Core.csproj", "{127E6DC7-2DFE-4ABC-BC19-B7A98F1BCEF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.Core", "InnoTech.LegosForLife.Core\InnoTech.LegosForLife.Core.csproj", "{127E6DC7-2DFE-4ABC-BC19-B7A98F1BCEF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innotech.LegosForLife.Domain", "Innotech.LegosForLife.Domain\Innotech.LegosForLife.Domain.csproj", "{B3A291AF-5CF0-422D-A4B6-F4B7DFB3818D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.Domain", "InnoTech.LegosForLife.Domain\InnoTech.LegosForLife.Domain.csproj", "{B3A291AF-5CF0-422D-A4B6-F4B7DFB3818D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innotech.LegosForLife.DataAccess", "Innotech.LegosForLife.DataAccess\Innotech.LegosForLife.DataAccess.csproj", "{5C551F5D-96C4-4996-8601-04F231BF9F76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.DataAccess", "InnoTech.LegosForLife.DataAccess\InnoTech.LegosForLife.DataAccess.csproj", "{5C551F5D-96C4-4996-8601-04F231BF9F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innotech.LegosforLife.WebApi", "Innotech.LegosforLife.WebApi\Innotech.LegosforLife.WebApi.csproj", "{899CB34F-2A56-47AF-80F9-EB83F3316BB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.WebApi", "InnoTech.LegosForLife.WebApi\InnoTech.LegosForLife.WebApi.csproj", "{899CB34F-2A56-47AF-80F9-EB83F3316BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innotech.LegosForLife.Security", "Innotech.LegosForLife.Security\Innotech.LegosForLife.Security.csproj", "{C6A9E4D9-31F3-41A3-9A24-EF1291E77185}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.Security", "InnoTech.LegosForLife.Security\InnoTech.LegosForLife.Security.csproj", "{C6A9E4D9-31F3-41A3-9A24-EF1291E77185}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
