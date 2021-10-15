@@ -1,3 +1,4 @@
+using System;
 using InnoTech.LegosForLife.Core.Models;
 using Xunit;
 
@@ -43,6 +44,7 @@ namespace InnoTech.LegosForLife.Core.Test.Models
         {
             _product.Name = "legoBrick";
             Assert.Equal("legoBrick",  _product.Name);
+            
         }
     }
 }
