@@ -7,16 +7,20 @@ namespace InnoTech.LegosForLife.Domain.Test
 {
     public class ProductService: IProductService
     {
+        private readonly IProductRepository _productRepository;
+
         public ProductService(IProductRepository productRepository)
         {
             if (productRepository == null)
             {
                 throw new InvalidDataException("ProductRepository Cannot Be Null");
             }
+            _productRepository = productRepository;
         }
         public List<Product> GetProducts()
         {
-            throw new System.NotImplementedException();
+            _productRepository.FindAll();
+            return null;
         }
     }
 }

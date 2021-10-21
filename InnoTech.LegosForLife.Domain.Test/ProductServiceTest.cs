@@ -35,6 +35,13 @@ namespace InnoTech.LegosForLife.Domain.Test
         }
         
         
-        
+        [Fact]
+        public void GetProducts_CallsProductRepositoriesFindAll_ExactlyOnce()
+        {
+            var mock = new Mock<IProductRepository>();
+            var service = new ProductService(mock.Object);
+            service.GetProducts();
+            mock.Verify(r => r.FindAll(), Times.Once);
+        }
     }
 }
