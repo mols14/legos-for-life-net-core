@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Onion-Core-Test", "Onion-Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.Core.Test", "InnoTech.LegosForLife.Core.Test\InnoTech.LegosForLife.Core.Test.csproj", "{69DAEF81-DD9F-45B4-96A7-55A7A7BE9C4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTech.LegosForLife.Domain.Test", "InnoTech.LegosForLife.Domain.Test\InnoTech.LegosForLife.Domain.Test.csproj", "{18D00957-4037-4C13-95F2-9B39A5676DCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 		{899CB34F-2A56-47AF-80F9-EB83F3316BB9} = {546B2B82-265A-45EE-A740-60AD92A58A06}
 		{C6A9E4D9-31F3-41A3-9A24-EF1291E77185} = {9A4D2006-6A28-4067-9316-996A5B55443A}
 		{69DAEF81-DD9F-45B4-96A7-55A7A7BE9C4A} = {3D3623AD-BA7E-48CE-99CB-F7831BC1A83E}
+		{18D00957-4037-4C13-95F2-9B39A5676DCE} = {3D3623AD-BA7E-48CE-99CB-F7831BC1A83E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{127E6DC7-2DFE-4ABC-BC19-B7A98F1BCEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +61,9 @@ Global
 		{69DAEF81-DD9F-45B4-96A7-55A7A7BE9C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69DAEF81-DD9F-45B4-96A7-55A7A7BE9C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69DAEF81-DD9F-45B4-96A7-55A7A7BE9C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D00957-4037-4C13-95F2-9B39A5676DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D00957-4037-4C13-95F2-9B39A5676DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D00957-4037-4C13-95F2-9B39A5676DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D00957-4037-4C13-95F2-9B39A5676DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
