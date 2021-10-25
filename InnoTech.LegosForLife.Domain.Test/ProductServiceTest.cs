@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
 using InnoTech.LegosForLife.Core.IServices;
+using InnoTech.LegosForLife.Core.Models;
 using Moq;
 using Xunit;
 
@@ -42,6 +45,22 @@ namespace InnoTech.LegosForLife.Domain.Test
             var service = new ProductService(mock.Object);
             service.GetProducts();
             mock.Verify(r => r.FindAll(), Times.Once);
+        }
+        
+        [Fact]
+        public void GetProducts_NoFilter_ReturnsListOfAllProducts()
+        {
+            var expected = new List<Product>
+            {
+                new Product { Id = 1, Name = "Lego1" },
+                new Product { Id = 2, Name = "Lego2" }
+            };
+            var mock = new Mock<IProductRepository>();
+            mock.Setup(r => r.FindAll())
+                .Returns(expected);
+            var service = new ProductService(mock.Object);
+            var actual = service.GetProducts();
+            Assert.Equal(expected, actual);
         }
     }
 }

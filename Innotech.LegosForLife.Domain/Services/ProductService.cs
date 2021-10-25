@@ -19,8 +19,7 @@ namespace InnoTech.LegosForLife.Domain.Test
         }
         public List<Product> GetProducts()
         {
-            _productRepository.FindAll();
-            return null;
+            return _productRepository.FindAll();
         }
     }
 }
