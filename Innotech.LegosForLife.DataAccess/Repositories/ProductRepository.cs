@@ -17,12 +17,13 @@ namespace InnoTech.LegosForLife.DataAccess.Repositories
         }
         public List<Product> FindAll()
         {
-           return _ctx.Products
-               .Select(pe => new Product {
-                   Id = pe.Id,
-                   Name = pe.Name,
-               })
-               .ToList();
+            return _ctx.Products
+                .Select(pe => new Product
+                {
+                    Id = pe.Id,
+                    Name = pe.Name
+                })
+                .ToList();
         }
     }
 }
