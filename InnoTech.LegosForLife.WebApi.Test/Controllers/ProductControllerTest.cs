@@ -1,22 +1,45 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using InnoTech.LegosForLife.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Xunit;
 using System.Reflection;
+using InnoTech.LegosForLife.Core.IServices;
 using InnoTech.LegosForLife.Core.Models;
-using TypeInfo = System.Reflection.TypeInfo;
+using Moq;
 
 namespace InnoTech.LegosForLife.WebApi.Test.Controllers
 {
     public class ProductControllerTest
     {
+        #region Controller Intialization
+
         [Fact]
-        public void ProductController_IsOfTypeControllerBase()
+        public void ProductController_HasProductService_IsOfTypeControllerBase()
         {
-            var controller = new ProductController();
+            var service = new Mock<IProductService>();
+            var controller = new ProductController(service.Object);
             Assert.IsAssignableFrom<ControllerBase>(controller);
+        }
+        
+        [Fact]
+        public void ProductController_WithNullProductService_ThrowsInvalidDataException()
+        {
+            Assert.Throws<InvalidDataException>(
+                () => new ProductController(null)
+            );
+
+        }
+        
+        [Fact]
+        public void ProductController_WithNullProductRepository_ThrowsExceptionWithMessage()
+        {
+            var exception = Assert.Throws<InvalidDataException>(
+                () => new ProductController(null)
+            );
+            Assert.Equal("ProductService Cannot Be Null",exception.Message);
         }
         
         [Fact]
@@ -58,16 +81,21 @@ namespace InnoTech.LegosForLife.WebApi.Test.Controllers
             Assert.Equal("api/[controller]", attr.Template);
         }
         
+
+        #endregion
+
+        #region GetAll Method
+
         [Fact]
         public void ProductController_HasGetAllMethod()
         {
             var method = typeof(ProductController)
-            .GetMethods().FirstOrDefault(m => "GetAll".Equals(m.Name));
+                .GetMethods().FirstOrDefault(m => "GetAll".Equals(m.Name));
             Assert.NotNull(method);
         }
         
         [Fact]
-        public void ProductController_HasGetAllMethod_IsPublic()
+        public void GetAll_WithNoParams_IsPublic()
         {
             var method = typeof(ProductController)
                 .GetMethods().FirstOrDefault(m => "GetAll".Equals(m.Name));
@@ -75,7 +103,7 @@ namespace InnoTech.LegosForLife.WebApi.Test.Controllers
         }
         
         [Fact]
-        public void ProductController_HasGetAllMethod_ReturnsListOfProductsInActionResult()
+        public void GetAll_WithNoParams_ReturnsListOfProductsInActionResult()
         {
             var method = typeof(ProductController)
                 .GetMethods().FirstOrDefault(m => "GetAll".Equals(m.Name));
@@ -83,13 +111,40 @@ namespace InnoTech.LegosForLife.WebApi.Test.Controllers
         }
 
         [Fact]
-        public void ProductController_GetAllMethod_HasGetHttpAttribute()
+        public void GetAll_WithNoParams_HasGetHttpAttribute()
         {
-            /*
-var methodInfo = typeof(ProductController).GetMethods().FirstOrDefault(m => m.Name == "GetAll");
-           var attr = methodInfo.CustomAttributes.FirstOrDefault(ca => ca.AttributeType.Name == "HttpGetAttribute");
-           Assert.NotNull(attr);*/
+            var methodInfo = typeof(ProductController)
+                .GetMethods()
+                .FirstOrDefault(m => m.Name == "GetAll");
+            var attr = methodInfo.CustomAttributes
+                .FirstOrDefault(ca => ca.AttributeType.Name == "HttpGetAttribute");
+            Assert.NotNull(attr);
         }
+        
+        [Fact]
+        public void GetAll_CallsServicesGetProducts_Once()
+        {
+            //Arrange
+            var mockService = new Mock<IProductService>();
+            var controller = new ProductController(mockService.Object);
+            
+            //Act
+            controller.GetAll();
+            
+            //Assert
+            mockService.Verify(s => s.GetProducts(),Times.Once);
+
+        }
+
+
+        #endregion
+
+        #region Post Method
+
+        
+
+        #endregion
+        
     }
 }
 
