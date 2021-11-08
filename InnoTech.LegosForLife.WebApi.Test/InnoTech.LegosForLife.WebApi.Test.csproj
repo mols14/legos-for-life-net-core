@@ -24,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\InnoTech.LegosForLife.Core\InnoTech.LegosForLife.Core.csproj" />
       <ProjectReference Include="..\InnoTech.LegosForLife.WebApi\InnoTech.LegosForLife.WebApi.csproj" />
     </ItemGroup>
 
