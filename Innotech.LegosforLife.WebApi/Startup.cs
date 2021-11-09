@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,17 @@ namespace InnoTech.LegosForLife.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Innotech.LegosforLife.WebApi", Version = "v1" });
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("shop-cors", builder =>
+                   {
+                        builder
+                            .WithOrigins("http://localhost:4200")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                  });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +51,8 @@ namespace InnoTech.LegosForLife.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("shop-cors");
 
             app.UseAuthorization();
 
